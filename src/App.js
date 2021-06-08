@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import React from 'react'
+export default class App extends React.Component{
+  render() {
+    let today = new Date();
+    let day = today.getDate();
+    let month = today.getMonth();
+    let year = today.getFullYear();
+    let hours = today.getHours();
+    let minutes = today.getMinutes();
+    return(
+      <div>
+        <p>On est le {day}/{month}/{year}</p>
+        <p>il est {hours}:{minutes}</p>
+      </div>
+    );
+  }
 }
 
-export default App;
