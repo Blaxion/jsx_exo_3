@@ -6,11 +6,11 @@ export default class App extends React.Component{
     let month = today.getMonth();
     let year = today.getFullYear();
     let hours = today.getHours();
-    let minutes = today.getMinutes();
+    this.minutes = today.getMinutes();
     return(
       <div>
         <p>On est le {day}/{month}/{year}</p>
-        <p>il est {hours}:{minutes}</p>
+        <p>il est {hours}:{this.minutes}</p>
       </div>
     );
   }
